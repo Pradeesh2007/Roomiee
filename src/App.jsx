@@ -5,8 +5,8 @@ import Browse from './pages/Browse'
 import CreateListing from './pages/CreateListing'
 import EditListing from './pages/EditListing'
 import ListingDetail from './pages/ListingDetail'
+import Dashboard from './pages/Dashboard'
 import ProtectedRoute from './components/ProtectedRoute'
-import { useAuth } from './context/AuthContext'
 
 function Home() {
   return (
@@ -30,43 +30,6 @@ function Home() {
         >
           Post a Room
         </Link>
-      </div>
-    </div>
-  )
-}
-
-function Dashboard() {
-  const { user, signOut } = useAuth()
-
-  return (
-    <div className="min-h-screen bg-gray-50 px-4 py-6">
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-2xl font-semibold text-gray-900 mb-1">
-          Dashboard
-        </h1>
-        <p className="text-sm text-gray-500 mb-6">
-          Logged in as: {user?.email}
-        </p>
-        <div className="flex gap-3">
-          <Link
-            to="/listings/new"
-            className="rounded-lg bg-indigo-600 text-white font-medium px-4 py-2 text-sm hover:bg-indigo-700 transition-colors"
-          >
-            Post a Room
-          </Link>
-          <Link
-            to="/browse"
-            className="rounded-lg border border-gray-300 text-gray-700 font-medium px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
-          >
-            Browse Rooms
-          </Link>
-          <button
-            onClick={signOut}
-            className="rounded-lg border border-gray-300 text-gray-700 font-medium px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
-          >
-            Log Out
-          </button>
-        </div>
       </div>
     </div>
   )
