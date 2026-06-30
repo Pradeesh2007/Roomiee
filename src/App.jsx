@@ -6,6 +6,8 @@ import CreateListing from './pages/CreateListing'
 import EditListing from './pages/EditListing'
 import ListingDetail from './pages/ListingDetail'
 import Dashboard from './pages/Dashboard'
+import Profile from './pages/Profile'
+import EditProfile from './pages/EditProfile'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function Home() {
@@ -64,6 +66,22 @@ function App() {
         element={
           <ProtectedRoute>
             <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/profile/edit"
+        element={
+          <ProtectedRoute>
+            <EditProfile />
           </ProtectedRoute>
         }
       />

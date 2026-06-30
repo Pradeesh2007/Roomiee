@@ -121,6 +121,12 @@ function Dashboard() {
           >
             Browse Rooms
           </Link>
+          <Link
+            to="/profile"
+            className="rounded-lg border border-gray-300 text-gray-700 font-medium px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+          >
+            My Profile
+          </Link>
         </div>
 
         <h2 className="text-lg font-semibold text-gray-900 mb-3">
