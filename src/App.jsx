@@ -8,6 +8,10 @@ import ListingDetail from './pages/ListingDetail'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import EditProfile from './pages/EditProfile'
+import BrowseRequests from './pages/BrowseRequests'
+import CreateRequest from './pages/CreateRequest'
+import RequestDetail from './pages/RequestDetail'
+import MyRequests from './pages/MyRequests'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function Home() {
@@ -82,6 +86,25 @@ function App() {
         element={
           <ProtectedRoute>
             <EditProfile />
+          </ProtectedRoute>
+        }
+      />
+      {/* Roommate Requests — Sprint 3 */}
+      <Route path="/requests" element={<BrowseRequests />} />
+      <Route path="/requests/:id" element={<RequestDetail />} />
+      <Route
+        path="/requests/new"
+        element={
+          <ProtectedRoute>
+            <CreateRequest />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/requests/my"
+        element={
+          <ProtectedRoute>
+            <MyRequests />
           </ProtectedRoute>
         }
       />

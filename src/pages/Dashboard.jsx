@@ -108,7 +108,7 @@ function Dashboard() {
           </button>
         </div>
 
-        <div className="flex gap-3 mb-6">
+        <div className="flex gap-3 mb-6 flex-wrap">
           <Link
             to="/listings/new"
             className="rounded-lg bg-indigo-600 text-white font-medium px-4 py-2 text-sm hover:bg-indigo-700 transition-colors"
@@ -116,10 +116,28 @@ function Dashboard() {
             + Post a Room
           </Link>
           <Link
+            to="/requests/new"
+            className="rounded-lg bg-indigo-600 text-white font-medium px-4 py-2 text-sm hover:bg-indigo-700 transition-colors"
+          >
+            + Find Roommates
+          </Link>
+          <Link
             to="/browse"
             className="rounded-lg border border-gray-300 text-gray-700 font-medium px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
           >
             Browse Rooms
+          </Link>
+          <Link
+            to="/requests"
+            className="rounded-lg border border-gray-300 text-gray-700 font-medium px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+          >
+            Browse Requests
+          </Link>
+          <Link
+            to="/requests/my"
+            className="rounded-lg border border-gray-300 text-gray-700 font-medium px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+          >
+            My Requests
           </Link>
           <Link
             to="/profile"
